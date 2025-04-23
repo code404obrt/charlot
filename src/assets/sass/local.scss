@@ -57,7 +57,7 @@
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(24 / 16 * 1rem);
             background-color: var(--primary);
-            border-radius: calc(4 / 16 * 1rem);
+            // border-radius: calc(4 / 16 * 1rem);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -74,7 +74,7 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: calc(4 / 16 * 1rem);
+                // border-radius: calc(4 / 16 * 1rem);
                 transition: width 0.3s;
             }
 
@@ -279,8 +279,8 @@
             }
 
             .cs-button-solid {
-                background-color: var(--secondaryLight);
-                color: #1a1a1a;
+                background-color: var(--primary);
+                color: var(--bodyTextColorWhite);
             }
         }
     }
