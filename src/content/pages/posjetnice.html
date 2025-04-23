@@ -1,0 +1,220 @@
+---
+title: "Posjetnice | Charlot"
+description: "Izrada posjetnica"
+preloadImg: "/assets/images/imagename.format"
+permalink: "posjetnice/"
+eleventyNavigation:
+    key: Posjetnice
+    order: 2300
+    parent: Digitalni tisak
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/posjetnice.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Posjetnice</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Početna</a>
+                <a href="" class="cs-link cs-active">Posjetnice</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    https://csimg.nyc3.digitaloceanspaces.com/Banners/library-m.jpg
+                "
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg
+                "
+            />
+            <img
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg"
+                alt="library"
+                width="1920"
+                height="375"
+            />
+        </picture>
+    </div>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="sbsr-1561">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <!--Top left image-->
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop1.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop1.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop1.jpg"
+                        alt="mechanic"
+                        width="305"
+                        height="265"
+                    />
+                </picture>
+                <!--Top Right image-->
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop2.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop2.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop2.jpg"
+                        alt="mechanic"
+                        width="197"
+                        height="265"
+                    />
+                </picture>
+                <!--Bottom Left image-->
+                <picture class="cs-picture cs-picture3">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop3.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop3.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop3.jpg"
+                        alt="mechanic"
+                        width="217"
+                        height="230"
+                    />
+                </picture>
+                <!--Bottom right image-->
+                <picture class="cs-picture cs-picture4">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop4.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop4.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop4.jpg"
+                        alt="mechanic"
+                        width="304"
+                        height="212"
+                    />
+                </picture>
+                <!--Middle image-->
+                <picture class="cs-picture cs-picture5">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop5.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop5.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shop5.jpg"
+                        alt="mechanic"
+                        width="305"
+                        height="445"
+                    />
+                </picture>
+            </div>
+            <div class="cs-content">
+                <span class="cs-topper">pr(a)vi dojam </span>
+                <h2 class="cs-title">
+                    Dizajn i tisak posjetnica za poduzetnike i tvrtke
+                </h2>
+                <p class="cs-text">
+                    Posjetnice igraju ključnu ulogu u poslovnoj komunikaciji,
+                    ostavljajući snažan dojam pri svakom predstavljanju.
+                    Pažljivo osmišljen dizajn odražava identitet tvrtke ili
+                    pojedinca, dok kvalitetan tisak osigurava dugotrajnost i
+                    vizualnu prepoznatljivost. Nudimo različite formate, završne
+                    obrade i materijale kako bi svaka posjetnica bila
+                    prilagođena vašim potrebama.
+                </p>
+                <p class="cs-text">
+                    Posjetnice najčešće sadrže ime, naziv i logotip tvrtke ili
+                    organizacije, te informacije o kontaktu, kao što su adresa,
+                    telefonski broj, broj mobitela, broj faksa, e-mail adresa i
+                    adresa web stranica. Ponekad se na posjetnicama nalaze i
+                    porezni broj, OIB te broj poslovnog računa. Posjetnice
+                    (vizitke, vizitkarte) mogu biti jednostrane ili dvostrane.
+                    Kod dvostranih vizitki često se na drugu stranu stavljaju
+                    informacije istovjetne onima na prvoj strani, ali na nekom
+                    drugom jeziku.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+{% endblock %}

@@ -1,0 +1,299 @@
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner-310 {
+        /* 144px - 252px */
+        padding-top: clamp(9rem, 25vw, 15.75rem);
+        /* 80px - 140px */
+        padding-bottom: clamp(5rem, 13vw, 8.75rem);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-int-title {
+            /* 39px - 49px */
+            font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: calc(700 / 16 * 1rem);
+            margin: 0 auto calc(12 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-breadcrumbs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-link {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:last-of-type {
+                /* remove the chevron on the last list item */
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                /* chevron - added as pseudo to make adding and removing them easier */
+                content: "";
+                width: calc(7 / 16 * 1rem);
+                height: calc(12 / 16 * 1rem);
+                margin-left: calc(12 / 16 * 1rem);
+                margin-right: calc(12 / 16 * 1rem);
+                background: url("https://csimg.nyc3.digitaloceanspaces.com/Banners/chevron-right.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &.cs-active {
+                color: var(--primaryLight);
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+
+            &:before {
+                /* black overlay box */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.72;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-1561 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            /* changes to 433px at desktop */
+            max-width: calc(542 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(48 / 16 * 1rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+            font-size: min(1.959vw, 0.745em);
+            width: calc(738 / 16 * 1em);
+            /* we set a minimum height so it never gets smaller than this value */
+            min-height: calc(628 / 16 * 1em);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            /* the percentage heights allow them to be responsive to the height of the parent cs-image-group. On desktop, when the felxbox is set to aling-items: stretch, the cs-image group will stretch to fill the height of the parent container. So when you add more content to the cs-content group and make it taller, the cs-image group will get taller with it and every image will stretch with the parent, making this entire group responsive to the changing amounts of content next to it */
+            width: calc(305 / 16 * 1em);
+            height: 42.197452%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .cs-picture2 {
+            width: calc(197 / 16 * 1em);
+            height: 42.197452%;
+            top: calc(21 / 16 * 1em);
+            right: calc(108 / 16 * 1em);
+            z-index: 10;
+        }
+
+        .cs-picture3 {
+            width: calc(217 / 16 * 1em);
+            height: 36.624204%;
+            bottom: 0;
+            left: calc(88 / 16 * 1em);
+            z-index: -1;
+        }
+
+        .cs-picture4 {
+            width: calc(304 / 16 * 1em);
+            height: 33.757962%;
+            bottom: calc(53 / 16 * 1em);
+            right: 0;
+            z-index: -1;
+        }
+
+        .cs-picture5 {
+            width: calc(305 / 16 * 1em);
+            height: 70.859873%;
+            top: calc(95 / 16 * 1em);
+            left: calc(217 / 16 * 1em);
+            z-index: 10;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-1561 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            /* this padding sets a minimum gap between the top and bottom of the content div and the top and bottom of the cs-image-group */
+            padding: calc(60 / 16 * 1rem) 0;
+            /* while the cs-image-group will stretch to fill the height of the parent, this property will ensure that the cs-content group aligns itse;f in the center of the parent div instead of stretching */
+            align-self: center;
+        }
+
+        .cs-image-group {
+            font-size: min(1.2vw, 1em);
+            flex: none;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbsr-1561 {
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}

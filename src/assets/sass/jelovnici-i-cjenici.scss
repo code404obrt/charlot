@@ -1,0 +1,276 @@
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner-310 {
+        /* 144px - 252px */
+        padding-top: clamp(9rem, 25vw, 15.75rem);
+        /* 80px - 140px */
+        padding-bottom: clamp(5rem, 13vw, 8.75rem);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-int-title {
+            /* 39px - 49px */
+            font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: calc(700 / 16 * 1rem);
+            margin: 0 auto calc(12 / 16 * 1rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-breadcrumbs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-link {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:last-of-type {
+                /* remove the chevron on the last list item */
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                /* chevron - added as pseudo to make adding and removing them easier */
+                content: "";
+                width: calc(7 / 16 * 1rem);
+                height: calc(12 / 16 * 1rem);
+                margin-left: calc(12 / 16 * 1rem);
+                margin-right: calc(12 / 16 * 1rem);
+                background: url("https://csimg.nyc3.digitaloceanspaces.com/Banners/chevron-right.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &.cs-active {
+                color: var(--primaryLight);
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+
+            &:before {
+                /* black overlay box */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.72;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        Side By Side        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-1598 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(584 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            height: 95vw;
+            max-height: calc(400 / 16 * 1rem);
+        }
+
+        .cs-picture2 {
+            height: 111vw;
+            max-height: calc(500 / 16 * 1rem);
+        }
+
+        .cs-stats-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* 28px - 40px */
+            gap: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        .cs-stats {
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            row-gap: calc(24 / 16 * 1rem);
+            column-gap: calc(12 / 16 * 1rem);
+        }
+
+        .cs-stat {
+            list-style: none;
+            margin: 0;
+            padding: 0 0 calc(24 / 16 * 1rem) 0;
+            border-bottom: 1px solid var(--primary);
+            /* making flex so we can align a heading with 1 line to the bottom */
+            display: flex;
+            grid-column: span 4;
+            flex-direction: column;
+            align-self: stretch;
+            align-content: space-between;
+        }
+
+        .cs-number {
+            /* 31px - 39px */
+            font-size: clamp(1.9375rem, 3vw, 2.4375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-align: left;
+            color: var(--headerColor);
+            display: block;
+            margin: 0 0 calc(4 / 16 * 1rem) 0;
+        }
+
+        .cs-desc {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            font-weight: 400;
+            text-align: left;
+            /* auto margin top will push text to bottom if there's only one line */
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-1598 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-picture1 {
+            /* 340px - 460px */
+            min-height: clamp(21.25rem, 35vw, 28.75rem);
+            height: 100%;
+            max-height: 100%;
+        }
+
+        .cs-picture2 {
+            /* 530px - 660px */
+            min-height: clamp(33.125rem, 45vw, 41.25rem);
+            height: 100%;
+            max-height: 100%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-1598 {
+            .cs-title,
+            .cs-text,
+            .cs-number,
+            .cs-desc {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text,
+            .cs-desc {
+                opacity: 0.8;
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+---
+title: "Jelovnici i cjenici | Charlot"
+description: "Usluge izrade i tiska jelovnika i cjenika"
+preloadImg: "/assets/images/imagename.format"
+permalink: "jelovnici-i-cjenici/"
+eleventyNavigation:
+    key: Jelovnici i cjenici
+    order: 2200
+    parent: Digitalni tisak
+    <!-- hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
+    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px -->
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/jelovnici-i-cjenici.css" />
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Jelovnici i cjenici</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Početna</a>
+                <a href="" class="cs-link cs-active">Jelovnici i cjenici</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <source
+                media="(max-width: 600px)"
+                srcset="
+                    https://csimg.nyc3.digitaloceanspaces.com/Banners/library-m.jpg
+                "
+            />
+            <source
+                media="(min-width: 601px)"
+                srcset="
+                    https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg
+                "
+            />
+            <img
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/Banners/library.jpg"
+                alt="library"
+                width="1920"
+                height="375"
+            />
+        </picture>
+    </div>
+    <!-- ============================================ -->
+    <!--                Side By Side                  -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1598">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">za ugostiteljstvo</span>
+                <h2 class="cs-title">
+                    Dizajn i tisak cjenika i jelovnika za restorane i kafiće
+                </h2>
+                <p class="cs-text">
+                    Izrada cjenika i jelovnika za restorane i kafiće zahtijeva
+                    pažljivo oblikovanje kako bi sadržaj bio pregledan, estetski
+                    privlačan i usklađen s vizualnim identitetom lokala. Kroz
+                    kreativni dizajn i kvalitetan tisak, svaki jelovnik može
+                    postati više od informativnog materijala—može doprinositi
+                    atmosferi i doživljaju gostiju. Opcije uključuju različite
+                    formate, papire i završne obrade, poput plastifikacije ili
+                    reljefnog ispisa, što osigurava dugotrajnost i otpornost na
+                    svakodnevnu uporabu. Bilo da se radi o klasičnom, elegantnom
+                    izgledu ili modernom minimalističkom pristupu, dizajn
+                    prilagođavamo prema željama i stilu svakog ugostiteljskog
+                    objekta.
+                </p>
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg"
+                        alt="people"
+                        width="608"
+                        height="406"
+                    />
+                </picture>
+            </div>
+            <div class="cs-stats-group">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg
+                        "
+                    />
+                    <!--Tablet and above Image-->
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="
+                            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg
+                        "
+                    />
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg"
+                        alt="people"
+                        width="608"
+                        height="662"
+                    />
+                </picture>
+                <ul class="cs-stats">
+                    <li class="cs-stat">
+                        <span class="cs-number">99%</span>
+                        <span class="cs-desc">Positive feedback</span>
+                    </li>
+                    <li class="cs-stat">
+                        <span class="cs-number">10</span>
+                        <span class="cs-desc">Days free return policy</span>
+                    </li>
+                    <li class="cs-stat">
+                        <span class="cs-number">24/7</span>
+                        <span class="cs-desc">Online customer support</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
+{% endblock %}
