@@ -112,32 +112,48 @@
 }
 
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---        Side By Side        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbsr-1561 {
+    #sbs-1984 {
         padding: var(--sectionPadding);
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            opacity: 0.05;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
 
         .cs-container {
             width: 100%;
             /* changes to 1280px at desktop */
-            max-width: calc(550 / 16 * 1rem);
+            max-width: calc(704 / 16 * 1rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
         }
 
         .cs-content {
             /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-            /* changes to 433px at desktop */
-            max-width: calc(542 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             /* centers content horizontally, set to flex-start to left align */
@@ -145,37 +161,62 @@
         }
 
         .cs-text {
-            margin-bottom: calc(16 / 16 * 1rem);
-            &:last-of-type {
-                margin-bottom: calc(32 / 16 * 1rem);
-            }
+            margin-bottom: calc(24 / 16 * 1rem);
+        }
+
+        .cs-ul {
+            margin: 0 0 calc(32 / 16 * 1rem) 0;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .cs-li {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            list-style: none;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+        }
+
+        .cs-icon {
+            width: calc(20 / 16 * 1rem);
+            height: auto;
+            display: block;
         }
 
         .cs-button-solid {
             font-size: calc(16 / 16 * 1rem);
+            font-weight: 700;
             /* 46px - 56px */
             line-height: clamp(2.875rem, 5.5vw, 3.5rem);
             text-decoration: none;
-            font-weight: 700;
-            text-align: center;
             margin: 0;
-            color: #fff;
-            min-width: calc(150 / 16 * 1rem);
-            padding: 0 calc(48 / 16 * 1rem);
+            /* 32px - 48px */
+            padding: 0 clamp(2rem, 4vw, 3rem);
             background-color: var(--primary);
+            overflow: hidden;
+            color: #fff;
+            // border-radius: calc(8 / 16 * 1rem);
             display: inline-block;
             position: relative;
             z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
+            transition: color 0.3s;
 
             &:before {
                 content: "";
-                position: absolute;
-                height: 100%;
                 width: 0%;
-                background: #000;
+                height: 100%;
+                background: #1a1a1a;
                 opacity: 1;
+                display: block;
+                position: absolute;
                 top: 0;
                 left: 0;
                 z-index: -1;
@@ -183,6 +224,8 @@
             }
 
             &:hover {
+                color: #fff;
+
                 &:before {
                     width: 100%;
                 }
@@ -190,94 +233,92 @@
         }
 
         .cs-image-group {
-            /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
-            font-size: min(1.959vw, 0.745em);
-            width: calc(738 / 16 * 1em);
-            /* we set a minimum height so it never gets smaller than this value */
-            min-height: calc(628 / 16 * 1em);
-            display: block;
-            position: relative;
-            z-index: 1;
+            font-size: min(2.7vw, 1rem);
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            order: -1;
+            row-gap: calc(32 / 16 * 1em);
         }
 
         .cs-picture {
-            position: absolute;
+            width: 90%;
+            height: calc(180 / 16 * 1em);
+            box-sizing: border-box;
+            background-color: #dab692;
+            /* clips img tag from overflowing it on hover */
+            overflow: hidden;
+            // border-radius: calc(16 / 16 * 1rem);
+            grid-column: span 12;
+            display: block;
+            z-index: 2;
+
+            &:nth-of-type(even) {
+                margin-left: auto;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
 
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                position: absolute;
                 top: 0;
                 left: 0;
+                transition: transform 0.7s;
             }
-        }
-
-        .cs-picture1 {
-            /* the percentage heights allow them to be responsive to the height of the parent cs-image-group. On desktop, when the felxbox is set to aling-items: stretch, the cs-image group will stretch to fill the height of the parent container. So when you add more content to the cs-content group and make it taller, the cs-image group will get taller with it and every image will stretch with the parent, making this entire group responsive to the changing amounts of content next to it */
-            width: calc(305 / 16 * 1em);
-            height: 42.197452%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        .cs-picture2 {
-            width: calc(197 / 16 * 1em);
-            height: 42.197452%;
-            top: calc(21 / 16 * 1em);
-            right: calc(108 / 16 * 1em);
-            z-index: 10;
-        }
-
-        .cs-picture3 {
-            width: calc(217 / 16 * 1em);
-            height: 36.624204%;
-            bottom: 0;
-            left: calc(88 / 16 * 1em);
-            z-index: -1;
-        }
-
-        .cs-picture4 {
-            width: calc(304 / 16 * 1em);
-            height: 33.757962%;
-            bottom: calc(53 / 16 * 1em);
-            right: 0;
-            z-index: -1;
-        }
-
-        .cs-picture5 {
-            width: calc(305 / 16 * 1em);
-            height: 70.859873%;
-            top: calc(95 / 16 * 1em);
-            left: calc(217 / 16 * 1em);
-            z-index: 10;
         }
     }
 }
 
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #sbsr-1561 {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-1984 {
         .cs-container {
             max-width: calc(1280 / 16 * 1rem);
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: stretch;
         }
 
         .cs-content {
-            /* this padding sets a minimum gap between the top and bottom of the content div and the top and bottom of the cs-image-group */
-            padding: calc(60 / 16 * 1rem) 0;
-            /* while the cs-image-group will stretch to fill the height of the parent, this property will ensure that the cs-content group aligns itse;f in the center of the parent div instead of stretching */
+            /* changes to 100% at 1300px */
+            width: 43vw;
+            max-width: calc(630 / 16 * 1rem);
+            padding: calc(64 / 16 * 1rem) 0;
             align-self: center;
         }
 
         .cs-image-group {
-            font-size: min(1.2vw, 1em);
-            flex: none;
-            /* sends it to the right in the 2nd position */
-            order: 2;
+            width: 47vw;
+            height: 100%;
+            min-height: calc(572 / 16 * 1rem);
+            max-width: calc(562 / 16 * 1rem);
+            /* going absolute so we can make it responsive to the content inside the cs-content area. */
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .cs-picture {
+            height: auto;
+        }
+    }
+}
+
+/* Small Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #sbs-1984 {
+        .cs-content {
+            width: 100%;
         }
     }
 }
@@ -285,15 +326,65 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #sbsr-1561 {
+        #sbs-1984 {
+            background-color: rgba(0, 0, 0, 0.2);
+
             .cs-title,
-            .cs-text {
+            .cs-text,
+            .cs-li {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-text {
+            .cs-text,
+            .cs-li {
                 opacity: 0.8;
             }
+        }
+    }
+}
+
+/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-822 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+#list-822 {
+    width: 100%;
+    margin: 0 0 calc(32 / 16 * 1rem) 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 16px - 24px */
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+
+    .cs-li {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 700;
+        list-style: none;
+        line-height: 1.5em;
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: flex-start;
+        /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: calc(20 / 16 * 1rem);
+    }
+
+    .cs-icon {
+        /* adds extra space between the icon and top of parent so it's more centered */
+        margin-top: clamp(0.125rem, 0.47vw, 0.4375rem);
+    }
+}
+
+/* Dark Mode, copy and paste only the styles inside the #list-822 brackets into your section's dark mode media query */
+body.dark-mode {
+    #list-822 {
+        .cs-li {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-icon {
+            filter: brightness(150%);
         }
     }
 }

@@ -131,6 +131,7 @@
             align-items: center;
             /* 48px - 64px */
             gap: clamp(3rem, 7vw, 4rem);
+            margin-top: calc(16 / 16 * 1rem);
         }
 
         .cs-content {
@@ -168,7 +169,7 @@
             min-width: calc(150 / 16 * 1rem);
             padding: 0 calc(24 / 16 * 1rem);
             background-color: var(--primary);
-            border-radius: calc(4 / 16 * 1rem);
+            // border-radius: calc(4 / 16 * 1rem);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -185,7 +186,7 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: calc(4 / 16 * 1rem);
+                // border-radius: calc(4 / 16 * 1rem);
                 transition: width 0.3s;
             }
 
@@ -338,6 +339,55 @@
     body.dark-mode {
         #RTsbsr-581 {
             background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---    tampon list style       -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-822 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+#list-822 {
+    width: 100%;
+    margin: 0 0 calc(32 / 16 * 1rem) 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 16px - 24px */
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+
+    .cs-li {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 700;
+        list-style: none;
+        line-height: 1.5em;
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: flex-start;
+        /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: calc(20 / 16 * 1rem);
+    }
+
+    .cs-icon {
+        /* adds extra space between the icon and top of parent so it's more centered */
+        margin-top: clamp(0.125rem, 0.47vw, 0.4375rem);
+    }
+}
+
+/* Dark Mode, copy and paste only the styles inside the #list-822 brackets into your section's dark mode media query */
+body.dark-mode {
+    #list-822 {
+        .cs-li {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-icon {
+            filter: brightness(150%);
         }
     }
 }
